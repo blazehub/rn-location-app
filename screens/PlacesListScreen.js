@@ -22,7 +22,7 @@ const PlacesListScreen = props => {
                     });
                 }}
                 title={itemData.item.title}
-                image={null} address={null} />}
+                image={itemData.item.image} address={null} />}
         >
         </FlatList >
     )
