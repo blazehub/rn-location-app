@@ -9,6 +9,16 @@ import PlacesNavigator from './navigation/PlacesNavigator';
 
 
 import placeReducer from './store/places.reducer';
+import { init } from './helpers/db';
+
+init()
+  .then(() => {
+    console.log('Initialised database');
+  })
+  .catch(err => {
+    console.log('Initialising db failed');
+    console.log(err);
+  })
 
 const rootReducer = combineReducers({
   places: placeReducer
@@ -32,3 +42,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
